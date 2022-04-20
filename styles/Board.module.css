@@ -7,12 +7,23 @@
     height: 80px;
     width: 100%;
     padding: 10px;
-    border-bottom: 1px solid gray;
+    display: flex;
     line-height: 10px;
-
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
 } 
-.h1 {
-    line-height: 120%;
+.header .title h3 {
+    font-size: 1.5rem;
+    line-height: 10px;
+}
+.header .buttons {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.buttons div {
+    width: 120px;
+    line-height: 50px;
 }
 .main {
   min-height: 100vh;
