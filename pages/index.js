@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import DataTable from './common/DataTable.js'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Board.module.css'
 
-export default function Home() {
+export default function Board() {
   return (
     <div className={styles.container}>
         <Head>

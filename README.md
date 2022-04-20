@@ -25,11 +25,11 @@
 
 `MERN Stack`은 MongoDB, Express, React, Node의 약자로 스택을 구성하는 4가지 주요 테크놀로지입니다.
 
-Client는 `Next.js`를 이용해 생성하였습니다
+Client는 `React.js` 기반으로 생성하였습니다
 
 과제의 최종 목표는 MSA & MERN Stack을 사용해 `공공데이터에서 csv데이터들을 가져와 게시판을 만드는 것`입니다.
 
-`1주차`에는 React hook 방식으로 화면 구현을 목표로 작업을 완료했습니다.  공공 데이터는 복지서비스 정보를 사용하려 합니다
+`1주차`에는 `React hook` 방식으로 화면 구현을 목표로 작업을 완료했습니다.  공공 데이터는 `복지서비스 정보`를 사용하려 합니다
 
 ### 왜 MSA?
 
@@ -77,7 +77,9 @@ $ yarn dev
 
 ![MERN stack visualized](https://webimages.mongodb.com/_com_assets/cms/kobuybqq12c9ya16f-mernstack_visualized.png?auto=format%2Ccompress)
 
-이미지 출처 | 몽고DB 홈페이지 - mern-stack-tutorial (https://www.mongodb.com/languages/mern-stack-tutorial)
+<small><i><a href='https://www.mongodb.com/languages/mern-stack-tutorial'>이미지 출처 | 몽고DB 홈페이지 - mern-stack-tutorial</a></i></small>
+
+React로 클라이언트를 작업하여 프리젠테이션 계층을 구현하고 Express와 Node로 애플리케이션 계층을 구성하고 MongoDB로 데이터베이스 계층을 생성합니다.
 
 
 
