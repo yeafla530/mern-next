@@ -6,9 +6,10 @@
     justify-content: center;
 
 }
-.user form {
+.user {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .user input {

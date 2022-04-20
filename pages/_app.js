@@ -1,5 +1,5 @@
 import '../styles/globals.css'
-
+import {Layout} from "./common";
 import Head from 'next/head'
 const App = ({ Component, pageProps }) => {
   return (
@@ -12,7 +12,11 @@ const App = ({ Component, pageProps }) => {
             <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
             <title>Soccer App</title>
         </Head>
-        <Component {...pageProps} />
+        <Layout>
+            {/* 해당 router의 index.js(or [Projcet].js) 파일 */}
+            {/* automatic routing */}
+            <Component {...pageProps} />
+        </Layout>
       </>
   ) 
 }

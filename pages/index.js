@@ -1,42 +1,22 @@
 import Head from 'next/head'
 import {useState} from 'react'
-import DataTable from './table/DataTable.js'
-import Login from './user/Login.js'
-import Join from './user/Join.js'
+import DataTable from './table/dataTable.js'
+import Login from './user/login.js'
+import Join from './user/join.js'
 import styles from '../styles/Table.module.css'
 
-export default function Table() {
+export default function Home() {
     const [status, setStatus] = useState("login")
     
     return (
+        // 홈
         <div className={styles.container}>
             <Head>
                 <title>딥브레인 AI 과제</title>
             </Head>
-
-            <header className={styles.header}>
-                <div className={styles.title}>
-                    <h3>한국사회보장정보원_복지서비스정보 게시판</h3>
-                </div>
-                <div className={styles.buttons}>
-                    <div onClick={() => setStatus("login")}>
-                        <p>로그인</p>
-                    </div>
-                    <div onClick={() => setStatus("join")}>
-                        <p>회원가입</p>
-                    </div>
-                    <div onClick={() => setStatus("dataTable")}>
-                        <p>데이터</p>
-                    </div>
-                </div>
-            </header>
-            <main className={styles.main}>
-                {status === "login" ? <Login/> : status === "join" ? <Join/> : <DataTable/>}   
+            <main>
+                <h1>딥브레인 3기 과제 홈페이지</h1>
             </main>
-
-            <footer className={styles.footer}>
-                <p>| Email | yeafla530@naver.com</p>
-            </footer>
         </div>
     )
 }

@@ -1,0 +1,50 @@
+.nav {
+    text-align: center;
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    line-height: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+} 
+.nav .title h3 {
+    font-size: 1.5rem;
+    line-height: 10px;
+}
+.nav .buttons {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.buttons div {
+    width: 120px;
+    line-height: 50px;
+}
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+    display: flex;
+    flex: 1;
+    padding: 2rem 0;
+    border-top: 1px solid #eaeaea;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  

@@ -1,6 +1,16 @@
 import styles from '../../styles/Table.module.css'
 
-const DataTable = () => {
+// 맨 앞글자 대문자여야함
+function DataTableList(props) {
+    return (
+        Object.entries(props.obj).map(([key,value]) => (
+            <td key={key}>{value}</td>
+        ))
+        
+    )
+}
+
+export default function DataTable() {
     const tableHeader = [
         "서비스아이디",
         "서비스명",
@@ -28,11 +38,7 @@ const DataTable = () => {
                 {dummyData.length > 0 ? 
                     dummyData.map((obj, idx) => (
                         <tr key={idx}>
-                            {
-                                Object.entries(obj).map(([key,value]) => (
-                                    <td key={key}>{value}</td>
-                                ))
-                            }
+                            <DataTableList obj={obj}/>
                         </tr>
                     ))
                     
@@ -51,5 +57,3 @@ const DataTable = () => {
         </table>
     )
 }
-
-export default DataTable
