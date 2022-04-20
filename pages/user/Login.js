@@ -6,7 +6,7 @@ const Login = () => {
             <form>
                 <h1>로그인</h1>
                 <input type="text" placeholder="아이디"/>
-                <input type="text" placeholder="비밀번호"/>
+                <input type="password" placeholder="비밀번호"/>
                 <button type="submitstyles ">로그인</button>
             </form>
         </div>

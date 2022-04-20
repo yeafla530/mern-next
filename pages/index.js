@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import {useState} from 'react'
-import DataTable from './common/DataTable.js'
+import DataTable from './table/DataTable.js'
 import Login from './user/Login.js'
 import Join from './user/Join.js'
-import styles from '../styles/Board.module.css'
+import styles from '../styles/Table.module.css'
 
-export default function Board() {
+export default function Table() {
     const [status, setStatus] = useState("login")
     
     return (
