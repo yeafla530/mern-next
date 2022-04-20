@@ -2,23 +2,38 @@
 
 ## 📎목차
 
-[TOC]
+- [MERN & MSA 과제 - Client](#mern---msa------client)
+  * [📎목차](#----)
+  * [💻개요](#----)
+    + [왜 MSA?](#--msa-)
+    + [왜 MERN?](#--mern-)
+  * [📁프로젝트 시작](#---------)
+    + [yarn 설치](#yarn---)
+    + [dependencies 설치](#dependencies---)
+    + [package 설치](#package---)
+    + [로컬 테스트](#------)
+  * [📐시스템 아키텍쳐](#----------)
+  * [✉느낀점](#----)
+    + [1주차](#1--)
+  * [📍오픈소스](#------)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
 ## 💻개요
 
-딥브레인 AI 아카데미 교육 과정을 들으며, MSA & MERN Stack으로 만든 프로젝트 입니다.
+`딥브레인 AI 아카데미 교육` 과정을 들으며, MSA & MERN Stack으로 만든 프로젝트 입니다.
 
-MSA란, Micro Service Architacture로  단일 프로그램을 각 컴포넌트 별로 나누어 작은 서비스의 조합으로 구축하는 방법입니다.
+`MSA란`, Micro Service Architacture로  단일 프로그램을 각 컴포넌트 별로 나누어 작은 서비스의 조합으로 구축하는 방법입니다.
 
-MERN Stack은 MongoDB, Express, React, Node의 약자로 스택을 구성하는 4가지 주요 테크놀로지입니다.
+`MERN Stack`은 MongoDB, Express, React, Node의 약자로 스택을 구성하는 4가지 주요 테크놀로지입니다.
 
-클라이언트는 Next.js를 이용해 생성하였습니다
+Client는 `Next.js`를 이용해 생성하였습니다
 
-과제의 최종 목표는 MSA & MERN Stack을 사용해 공공데이터에서 csv데이터들을 가져와 게시판을 만드는 것입니다.
+과제의 최종 목표는 MSA & MERN Stack을 사용해 `공공데이터에서 csv데이터들을 가져와 게시판을 만드는 것`입니다.
 
-1주차에는 React hook 방식으로 화면 구현을 목표로 작업을 완료했습니다.  공공 데이터는 복지서비스 정보를 사용하려 합니다
+`1주차`에는 React hook 방식으로 화면 구현을 목표로 작업을 완료했습니다.  공공 데이터는 복지서비스 정보를 사용하려 합니다
 
 ### 왜 MSA?
 
@@ -76,7 +91,7 @@ $ yarn dev
 
 ```
 프론트엔드를 주로 해왔었는데 이렇게 MERN스택을 사용하여 파이프라인을 설계하면서 프로젝트의 전체적인 흐름을 알 수 있어서 좋았습니다. 
-5주간 배워가는게 많을 것 같아 기대가 됩니다. 아직 모르는게 많아 정신없지만 수업을 따라갈 수 있도록 열심히 공부해야될 것 같습니다
+5주간 배워가는게 많을 것 같아 기대가 됩니다. 아직 모르는게 많아서 수업을 따라갈 수 있도록 열심히 공부해야될 것 같습니다.
 ```
 
 
