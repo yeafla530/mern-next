@@ -83,6 +83,22 @@ React로 클라이언트를 작업하여 프리젠테이션 계층을 구현하�
 
 
 
+## ✨이슈
+
+### 1주차
+
+* router에 대한 이해가 부족했고, 복습 후 `automatic routing`기능이 있는걸 다시금 깨달을 수 있었다. `폴더명과 라우트명을 일치`시켜야한다는걸 기억해야한다
+
+* 진입점은 `__app.js`이고,  `__app.js`의 `Component`는 router가 이동할 때 (폴더명: user, router: /user) 해당 `폴더의 index.js`를 가리킨다는걸 학습할 수 있었다. 
+
+  router가 `/user/login`인 경우엔 `user > login.js`를 가리키는 것
+
+* `import style component`를 사용하여 `JSON형태의 데이터`를 이중 map으로 처리하였다 
+
+
+
+
+
 ## ✉느낀점
 
 ### 1주차

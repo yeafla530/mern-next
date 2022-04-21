@@ -1,5 +1,6 @@
 import styles from '../../styles/Table.module.css'
 
+// import style component
 // 맨 앞글자 대문자여야함
 function DataTableList(props) {
     return (
