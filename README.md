@@ -11,6 +11,7 @@
   + [package 설치](#package-설치)
   + [로컬 테스트](#로컬-테스트)
 * [📐시스템 아키텍쳐](#시스템-아키텍쳐)
+* [⚙기술 설명](#기술-설명)
 * [✉느낀점](#느낀점)
   + [1주차](#1주차)
 * [📍오픈소스](#오픈소스)
@@ -80,6 +81,22 @@ $ yarn dev
 <small><i><a href='https://www.mongodb.com/languages/mern-stack-tutorial'>이미지 출처 | 몽고DB 홈페이지 - mern-stack-tutorial</a></i></small>
 
 React로 클라이언트를 작업하여 프리젠테이션 계층을 구현하고 Express와 Node로 애플리케이션 계층을 구성하고 MongoDB로 데이터베이스 계층을 생성합니다.
+
+
+
+## ⚙기술 설명
+
+|  개발언어  | 개발환경 | API & 라이브러리 |
+| :--------: | :------: | :--------------: |
+| JavaScript | Next.js  |      react       |
+|            |          |      axios       |
+|            |          |                  |
+
+`Next.js` : 리액트 라이브러리의 프레임워크
+
+`react` : 뷰 라이브러리
+
+`axios` : 비동기 호출 라이브러리
 
 
 
