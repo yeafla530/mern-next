@@ -26,7 +26,7 @@
 
 `MERN Stack`은 MongoDB, Express, React, Node의 약자로 스택을 구성하는 4가지 주요 테크놀로지입니다.
 
-Client는 `React.js` 기반으로 생성하였습니다
+Client는 `Next.js` 기반으로 작업하였습니다.
 
 과제의 최종 목표는 MSA & MERN Stack을 사용해 `공공데이터에서 csv데이터들을 가져와 게시판을 만드는 것`입니다.
 
