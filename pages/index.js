@@ -10,13 +10,14 @@ export default function Home() {
     const [status, setStatus] = useState("login")
     // 서버 연결 확인
     useEffect(() => {
+        // /api/ 필수! 
         axios.get("http://localhost:5000/api/now")
-        .then(res => {
-            let data = res.data
-            document.getElementById('timezone').innerHtml = 
-            `<p>현재시간 ${data}</p>`
-        })
-    }, []);
+        .then((res) => {
+            let  data = res.data;
+            document.getElementById("timezone").innerHTML = '<h3>현재시간: '+data.now+'<h3>'
+        });
+        
+    },[]);
     return (
         // 홈
         <div className={styles.container}>
