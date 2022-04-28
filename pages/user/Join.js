@@ -1,4 +1,6 @@
 import React,{useState} from 'react';
+import { useDispatch } from "react-redux";
+import {userActions} from '../../redux/reducers/userReducer.ts'
 import styles from '../../styles/User.module.css';
 
 export default function Join() {
@@ -7,18 +9,26 @@ export default function Join() {
         userid: '', password: '', repassword: '', email: '', name: '', phone: '', birth: '', address: ''
     })
 
+    // Dispatch
+    const dispatch = useDispatch()
+
     // 변경되는 값
     const handleChange = e => {
         e.preventDefault()
         // input의 name과 value를 구조분해 할당
         const {name, value} = e.target
         setUser({...user, [name]:value})
+        console.log("user", user)
 
     }
 
     return (
         <form className={styles.user} onSubmit={e => {
             e.preventDefault()
+            alert(`진행1: 회원가입 클릭 ${user}`)
+            // userReducer에서 행해지는 actions
+            // 변화감지
+            dispatch(userActions.joinRequest(user))
             setUser({
                 userid:'', password: '', repassword: '',  email: '', name: '', phone: '', birth: '', address: ''
             })
