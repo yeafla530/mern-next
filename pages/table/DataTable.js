@@ -62,11 +62,13 @@ export default function DataTable() {
         console.log('pay', payload)
         await setModList(payload)
         setIsMod(true)
-        console.log('mod', modList)
 
     }
     const handleChangeModify = (payload) => {
-        console.log(payload)
+        e.preventDefault()
+        const {name, value} = e.target
+        setData({...data, [name]:value})
+        // console.log(payload)
         // setModList(payload)
     } 
     const tableHeader = [
@@ -113,7 +115,7 @@ export default function DataTable() {
                                <button onClick={() => (
                                    deleteList({delid:table._id})
                                )}>삭제</button>
-                               <button onClick={() => clickModify({id: table._id, title: table.title, content: table.content, created_at: table.created_at})}>수정</button>
+                               <button onClick={() => clickModify({updateid: table._id, title: table.title, content: table.content, created_at: table.created_at})}>수정</button>
                            </td>
 
                         </tr> 

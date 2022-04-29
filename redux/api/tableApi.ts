@@ -52,3 +52,21 @@ export const deleteApi = async (payload : {
         return err;
     }
 }
+
+export const updateApi = async (payload : {
+    updateid: object,
+    title: string,
+    content: string,
+    created_at: string,
+}) => {
+    try{
+        const response:AxiosResponse<unknown, TableType[]> = await axios.post( 
+            `${SERVER}/table/update`, 
+            payload,
+            {headers}
+        )
+        return response.data
+    }catch(err){
+        return err;
+    }
+}

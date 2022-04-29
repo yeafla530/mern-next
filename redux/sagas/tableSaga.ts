@@ -3,6 +3,8 @@ import { call, delay, put, takeLatest } from "redux-saga/effects"
 import { tableActions } from "../reducers/tableReducer.ts";
 import { createApi } from "../api/tableApi.ts";
 import { deleteApi } from "../api/tableApi.ts";
+import { updateApi } from "../api/tableApi.ts";
+
 
 // 1. interface - 타입
 interface TableCreateType{
@@ -29,6 +31,17 @@ interface TableDeleteSuccessType{
     type: string,
 }
 
+interface TableUpdateType{
+    type: string,
+    payload: {
+        updateid: string, title: string, content: string, created_at: string,
+    }
+}
+
+interface TableUpdateSuccessType{
+    type: string,
+}
+
 function* create(table: TableCreateType) {
     try{
         // //alert('진행3 : saga내부 create')
@@ -52,10 +65,25 @@ function* deleteTable(table: TableDeleteType) {
     }
 }
 
+function* updateTable(table: TableUpdateType) {
+    try{
+        //alert('진행3 : saga 내부 create')
+        const response : TableUpdateSuccessType = yield updateApi(table.payload) // api
+        yield put(tableActions.deleteSuccess(response)) // reducer
+    }catch(error){
+        //alert(' 진행 3: saga내부 login 실패')
+        yield put(tableActions.deleteFailure(error))
+    }
+}
+
 export function* watchCreate() {
     yield takeLatest(tableActions.createRequest, create)
 }
 
 export function* watchDelete() {
     yield takeLatest(tableActions.deleteRequest, deleteTable)
+}
+
+export function* watchUpdate() {
+    yield takeLatest(tableActions.modifyRequest, updateTable)
 }
