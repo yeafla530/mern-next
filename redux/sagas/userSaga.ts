@@ -23,12 +23,12 @@ interface UserJoinSuccessType{
 // 
 function* join(user: UserJoinType) {
     try{
-        alert('진행3 : saga내부 join')
+        //alert('진행3 : saga내부 join')
         const response : UserJoinSuccessType = yield joinApi(user.payload)
         yield put(userActions.joinSuccess(response))
         window.location.href = '/'
     } catch(error) {
-        alert('진행3 : saga 내부 join 실패')
+        //alert('진행3 : saga 내부 join 실패')
         yield put(userActions.joinFailure(error))
     }
 }

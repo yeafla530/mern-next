@@ -14,7 +14,6 @@ const rootReducer = (state: any, action: any) => {
             ...action.payload
         }
     }
-
     // 순수함수
     // 리듀서를 하나로 모아줌
     return combineReducers({

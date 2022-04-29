@@ -6,7 +6,7 @@
 
 // export default function createTable() {
 //     const [data, setData] = useState({
-//         title:'', content:'', created_at: Date.now().toLocaleString()
+//         title:'', content:'', created_at: new Date().toDateString()
 //     });
 //     const handleChange = (e) => { 
 //         e.preventDefault()
@@ -18,7 +18,7 @@
 //             e.preventDefault()
 //             // dispatch(userActions.joinRequest(user))
 //             // setData({
-//             //     title:'', content:'', created_at: Date.now()
+//             //     title:'', content:'', created_at: new Date().toDateString()
 //             // })
 //         }}>
 //             <h1>게시글 작성</h1>

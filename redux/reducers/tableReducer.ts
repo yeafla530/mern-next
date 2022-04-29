@@ -3,6 +3,7 @@ import {createSlice} from '@reduxjs/toolkit'
 // type check
 // interface : 타입 정의
 export interface TableType {
+    _id: string,
     title: string,
     content: string,
     created_at: string,
@@ -30,7 +31,7 @@ const tableSlice = createSlice({
     reducers: {
         // 액션 생성함수
         createRequest(state: TableState, _payload) {
-            alert('진행2: 리듀서 내부')
+            // //alert('진행2: 리듀서 내부')
             state.loading = true
         },
 
@@ -41,7 +42,37 @@ const tableSlice = createSlice({
         createFailure(state: TableState, {payload}) {
             state.data = payload
             state.loading = false
-        }
+        },
+
+        deleteRequest(state: TableState, _payload) {
+            //alert('진행2: 리듀서 내부')
+            state.loading = true
+        },
+        deleteSuccess(state: TableState, {payload}) {
+            //alert('진행4: 리듀서 내부')
+            state.data = [...state.data, payload]
+            state.loading = false
+        },
+        deleteFailure(state: TableState, {payload}) {
+            state.data = payload
+            state.loading = false
+        },
+
+        modifyRequest(state: TableState, _payload) {
+            //alert('진행2: 리듀서 내부')
+            state.loading = true
+        },
+        modifySuccess(state: TableState, {payload}) {
+            //alert('진행4: 리듀서 내부')
+            state.data = [...state.data, payload]
+            state.loading = false
+        },
+        modifyFailure(state: TableState, {payload}) {
+            state.data = payload
+            state.loading = false
+        },
+
+
     }
 
 })

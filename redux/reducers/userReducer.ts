@@ -34,7 +34,7 @@ const userSlice = createSlice({
     reducers: {
         // 액션 생성함수
         joinRequest(state: UserState, _payload) {
-            alert('진행2: 리듀서 내부')
+            //alert('진행2: 리듀서 내부')
             state.loading = true
         },
 

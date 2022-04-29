@@ -4,7 +4,9 @@
 import {all} from 'redux-saga/effects'
 import { watchJoin } from './userSaga.ts'
 import { watchCreate } from './tableSaga.ts'
+import { watchDelete } from './tableSaga.ts'
+
 
 export default function* rootSaga() {
-    yield all([watchJoin(), watchCreate()])
+    yield all([watchJoin(), watchCreate(), watchDelete()])
 }

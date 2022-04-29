@@ -33,7 +33,7 @@ export const joinApi = async (payload : {
             {headers}
         )
         const loginUser = JSON.stringify(response.data)
-        alert('진행6 : 응답 성공' + JSON.stringify(loginUser))
+        //alert('진행6 : 응답 성공' + JSON.stringify(loginUser))
         localStorage.setItem("loginUser", loginUser)
         return response.data
     } catch(err) {

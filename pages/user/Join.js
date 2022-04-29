@@ -25,7 +25,7 @@ export default function Join() {
     return (
         <form className={styles.user} onSubmit={e => {
             e.preventDefault()
-            alert(`진행1: 회원가입 클릭 ${user}`)
+            // //alert(`진행1: 회원가입 클릭 ${user}`)
             // userReducer에서 행해지는 actions
             // 변화감지
             dispatch(userActions.joinRequest(user))

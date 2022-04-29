@@ -5,7 +5,7 @@ export default function Nav(){
     return (
         <nav className={styles.nav}>
             <div className={styles.title}>
-                <h3>딥브레인 게시판</h3>
+                <h3>TodoList</h3>
             </div>
             <div className={styles.buttons}>
                 {/* Next.js의 router이름은 폴더 구조와 동일 */}

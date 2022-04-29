@@ -7,6 +7,7 @@ const headers = {
 }
 
 export interface TableType {
+    _id: string,
     title: string,
     content: string,
     created_at: string,
@@ -14,6 +15,7 @@ export interface TableType {
 
 
 export const createApi = async (payload : {
+    _id: string,
     title: string,
     content: string,
     created_at: string,
@@ -26,11 +28,27 @@ export const createApi = async (payload : {
             {headers}
         )
         const createData = JSON.stringify(response.data)
-        alert('진행6 : 응답 성공' + JSON.stringify(createData))
+        // //alert('진행6 : 응답 성공' + JSON.stringify(createData))
         // localStorage.setItem("createData", createData)
 
         return response.data
     } catch(err) {
         return err
+    }
+}
+
+export const deleteApi = async (payload : {
+    delid: object,
+}) => {
+    try{
+        const response:AxiosResponse<unknown, TableType[]> = await axios.post( 
+            `${SERVER}/table/delete`, 
+            payload,
+            {headers}
+        )
+        console.log('서버실행', response.data)
+        return response.data
+    }catch(err){
+        return err;
     }
 }
