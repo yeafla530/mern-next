@@ -120,12 +120,12 @@ export default function DataTable() {
                            <td>{table.title}</td>
                            <td>{table.content}</td>
                            <td>{table.created_at}</td>
-                           <td>
+                           {isLogin ? <td>
                                <button onClick={() => (
                                    deleteList({delid:table._id})
                                )}>삭제</button>
                                <button onClick={() => clickModify({updateid: table._id, title: table.title, content: table.content, created_at: table.created_at})}>수정</button>
-                           </td>
+                           </td> : <td>비고</td>}
 
                         </tr> 
                     ))
