@@ -9,12 +9,12 @@ export default function Nav(){
             </div>
             <div className={styles.buttons}>
                 {/* Next.js의 router이름은 폴더 구조와 동일 */}
-                {/* <div>
+                <div>
                     <Link href="/user/login">로그인</Link>
                 </div>
                 <div>
                     <Link href="/user/join">회원가입</Link>
-                </div> */}
+                </div>
                 <div>
                     {/* <Link href="/table/createTable">게시글작성</Link> */}
                 </div>

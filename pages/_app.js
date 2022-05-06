@@ -11,7 +11,7 @@ const App = ({ Component, pageProps }) => {
             content="width=device-width, user-scalable=no, 
             initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"></meta>
             <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-            <title>Soccer App</title>
+            <title>Deepbrain</title>
         </Head>
         <Layout>
             {/* 해당 router의 index.js(or [Projcet].js) 파일 */}

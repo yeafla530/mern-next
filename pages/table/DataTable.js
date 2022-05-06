@@ -122,7 +122,7 @@ export default function DataTable() {
                     ))
                     :
                     <tr>
-                        <td colSpan="3">데이터가 존재하지 않습니다</td>
+                        <td colSpan="5">데이터가 존재하지 않습니다</td>
                     </tr>
                 }
             </tbody>
@@ -131,19 +131,19 @@ export default function DataTable() {
                 <form className={styles.user} onSubmit={e => {
                     e.preventDefault()
                     // //alert(`진행1: 작성 클릭 ${data}`)
-                    dispatch(tableActions.createRequest(data))
-                    setDataList([...dataList, data])
                     setData({
                         title:'', content:'', created_at: new Date().toDateString()
                     })
+                    dispatch(tableActions.createRequest(data))
+                    setDataList([...dataList, data])
                 }}>
 
                     <h1>List 추가</h1>
                     <div>
-                        <input type="text" name="title" placeholder="타이틀" onChange={handleChange}/>
+                        <input type="text" value={data.title} name="title" placeholder="타이틀" onChange={handleChange}/>
                     </div>
                     <div>
-                        <textarea name="content" placeholder="내용" onChange={handleChange}/>
+                        <textarea name="content" value={data.content} placeholder="내용" onChange={handleChange}/>
                     </div>
                     <div>
                         <button type="submit">작성완료</button>

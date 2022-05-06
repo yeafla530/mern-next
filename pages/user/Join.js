@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import {userActions} from '../../redux/reducers/userReducer.ts'
 import styles from '../../styles/User.module.css';
 
+
+
 export default function Join() {
     // 회원가입 정보
     const [user, setUser] = useState({
@@ -32,6 +34,7 @@ export default function Join() {
             setUser({
                 userid:'', password: '', repassword: '',  email: '', name: '', phone: '', birth: '', address: ''
             })
+
         }}>
             <h1>회원가입</h1>
             <input type="text" name="userid" placeholder="아이디" onChange={handleChange}/>

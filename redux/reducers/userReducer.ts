@@ -45,12 +45,29 @@ const userSlice = createSlice({
         joinFailure(state: UserState, {payload}) {
             state.data = payload
             state.loading = false
+        },
+        // 액션 생성함수
+        loginRequest(state: UserState, _payload) {
+            //alert('진행2: 리듀서 내부')
+            state.loading = true
+            console.log("??? 로그인됨")
+        },
+
+        loginSuccess(state: UserState, {payload}) {
+            state.data = [...state.data, payload]
+            state.loading = false
+        },
+        loginFailure(state: UserState, {payload}) {
+            state.data = payload
+            state.loading = false
         }
     }
 
 })
 
 // joinRequest joinSuccess joinFailure가 actions로 넘어감
+// loginRequest loginSuccess loginFailure가 actions로 넘어감
+
 const {reducer, actions} = userSlice
 export const userActions = actions
 export default reducer
