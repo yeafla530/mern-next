@@ -72,8 +72,7 @@ function* login(login: UserLoginType){
         } else if (response.request.status === 401){
             return alert('비밀번호가 올바르지 않습니다')
         }
-        localStorage.setItem("signin", JSON.stringify(login.payload))
-        window.location.href='/'
+        return response.data
     }catch(error){
          console.log('실패')
          yield put(userActions.loginFailure(error));

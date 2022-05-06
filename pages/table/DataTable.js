@@ -26,8 +26,18 @@ export default function DataTable() {
     })
     const [isMod, setIsMod] = useState(false)
     const dispatch = useDispatch()
-    
+    const [isLogin, setIsLogin] =  useState(false)
+
+
     useEffect(() =>{
+        if (localStorage.getItem("loginUser")) {
+            console.log('truetrue')
+            setIsLogin(true)
+        } else {
+            console.log('falsefalse')
+            setIsLogin(false)
+        }
+
         axios.get('http://localhost:5000/table/getTables')
         .then(res => {
             setDataList(res.data)
@@ -94,8 +104,6 @@ export default function DataTable() {
     return (
         <>
         <table className={styles.table}>
-            {/* <caption>복지서비스 정보</caption> */}
-            <caption>게시판</caption>
             {/* table header */}
             <thead>
                 <tr>
@@ -104,6 +112,7 @@ export default function DataTable() {
             </thead>
             {/* table body */}
             <tbody>
+                {isLogin}
                 {dataList.length > 0 ? 
                     dataList.map((table, idx) => (
                         <tr key={idx}>
@@ -127,7 +136,7 @@ export default function DataTable() {
                 }
             </tbody>
         </table>
-        {!isMod ? 
+        {isLogin ? (!isMod ? 
                 <form className={styles.user} onSubmit={e => {
                     e.preventDefault()
                     // //alert(`진행1: 작성 클릭 ${data}`)
@@ -160,7 +169,6 @@ export default function DataTable() {
                     id: '', title:'', content:'', created_at: new Date().toDateString()
                 })
             }}>
-
                 <h1>List 수정</h1>
                 <div>
                     <input type="text" name="title" placeholder="타이틀" value={modList.title} onChange={handleChangeModify}/>
@@ -174,7 +182,8 @@ export default function DataTable() {
                 </div>
             </form>
 
-        }
+        ): <></>}
+        
         </>
     )
 }

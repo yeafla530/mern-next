@@ -55,7 +55,7 @@ export const loginApi = async (payload : {
         const loginUser = JSON.stringify(response.data)
         // console.log(response.data)
         localStorage.setItem("loginUser", loginUser)
-        return response.data
+        window.location.href='/'
     } catch (err) {
         return err;
     }
